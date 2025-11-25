@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>나비 애니메이션</title>
+  <style>
+    /* 배경과 전체 스타일 설정 */
+    body {
+      margin: 0;
+      overflow: hidden;
+      background-color: #f0f8ff;
+    }
+
+    /* 나비 스타일 */
+    .butterfly {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background: url('https://via.placeholder.com/100x100?text=🦋') no-repeat center center;
+      background-size: contain;
+      animation: fly 5s infinite linear;
+    }
+
+    /* 나비 애니메이션 */
+    @keyframes fly {
+      0% {
+        left: 0;
+        top: 0;
+        transform: rotate(0deg);
+      }
+      25% {
+        left: 50%;
+        top: 20%;
+        transform: rotate(45deg);
+      }
+      50% {
+        left: 100%;
+        top: 0;
+        transform: rotate(90deg);
+      }
+      75% {
+        left: 50%;
+        top: -20%;
+        transform: rotate(135deg);
+      }
+      100% {
+        left: 0;
+        top: 0;
+        transform: rotate(180deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="butterfly"></div>
+
+  <script>
+    // 나비 애니메이션을 시작하는 함수 (필요시 JavaScript로 추가 기능을 구현할 수 있습니다)
+    document.addEventListener('DOMContentLoaded', function() {
+      const butterfly = document.querySelector('.butterfly');
+      butterfly.style.animationPlayState = 'running'; // 애니메이션 시작
+    });
+  </script>
+</body>
+</html>
