@@ -24,17 +24,13 @@
     /* 모바일 반응형 SVG */
     svg {
       width: 100%;
-      max-width: 420px;
-      display: block;
-      aspect-ratio: 420 / 360;
       height: auto;
-      margin-top: 50px; /* 중앙 정렬을 위한 여백 */
+      max-width: 420px; /* 최대 크기 설정 */
+      margin-top: 50px;
     }
 
-    /* 나비 날개 */
     .wing {
-      transform-origin: 50% 60%;
-      transform-box: fill-box;
+      transform-origin: 50% 50%;
       animation: flap 1.2s ease-in-out infinite;
       filter: drop-shadow(0 6px 10px rgba(0,0,0,0.12));
     }
